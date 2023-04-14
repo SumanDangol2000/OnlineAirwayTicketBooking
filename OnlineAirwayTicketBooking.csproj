@@ -67,13 +67,131 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404Page\404Page.aspx" />
+    <Content Include="Admin\airline_page.aspx" />
+    <Content Include="Admin\dashboard_page.aspx" />
+    <Content Include="Admin\flight_page.aspx" />
+    <Content Include="Admin\user_page.aspx" />
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <Content Include="Css\StyleSheet.css" />
+    <Content Include="Image\logo.png" />
+    <Content Include="Image\plane.png" />
+    <Content Include="Main\home.aspx" />
+    <Content Include="Main\login.aspx" />
+    <Content Include="Main\register.aspx" />
+    <Content Include="Passenger\booking_page.aspx" />
+    <Content Include="Passenger\payment_page.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="404Page\404Page.aspx.cs">
+      <DependentUpon>404Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404Page\404Page.aspx.designer.cs">
+      <DependentUpon>404Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\airline_page.aspx.cs">
+      <DependentUpon>airline_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\airline_page.aspx.designer.cs">
+      <DependentUpon>airline_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\dashboard_page.aspx.cs">
+      <DependentUpon>dashboard_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dashboard_page.aspx.designer.cs">
+      <DependentUpon>dashboard_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\flight_page.aspx.cs">
+      <DependentUpon>flight_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\flight_page.aspx.designer.cs">
+      <DependentUpon>flight_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\user_page.aspx.cs">
+      <DependentUpon>user_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\user_page.aspx.designer.cs">
+      <DependentUpon>user_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\BookingsDao.cs" />
+    <Compile Include="Dao\PaymentsDao.cs" />
+    <Compile Include="Dao\UsersDao.cs" />
+    <Compile Include="Main\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Main\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Bookings.cs" />
+    <Compile Include="Model\Payments.cs" />
+    <Compile Include="Model\Users.cs" />
+    <Compile Include="Passenger\booking_page.aspx.cs">
+      <DependentUpon>booking_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Passenger\booking_page.aspx.designer.cs">
+      <DependentUpon>booking_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Passenger\passenger.Master.cs">
+      <DependentUpon>passenger.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Passenger\passenger.Master.designer.cs">
+      <DependentUpon>passenger.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Passenger\payment_page.aspx.cs">
+      <DependentUpon>payment_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Passenger\payment_page.aspx.designer.cs">
+      <DependentUpon>payment_page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Myconnection.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Main\main.Master" />
+    <Content Include="Admin\admin.Master" />
     <None Include="packages.config" />
+    <Content Include="Passenger\passenger.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -81,6 +199,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
