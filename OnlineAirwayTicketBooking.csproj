@@ -79,6 +79,7 @@
     <Content Include="Css\StyleSheet.css" />
     <Content Include="Image\logo.png" />
     <Content Include="Image\plane.png" />
+    <Content Include="Image\user.png" />
     <Content Include="Main\home.aspx" />
     <Content Include="Main\login.aspx" />
     <Content Include="Main\register.aspx" />
