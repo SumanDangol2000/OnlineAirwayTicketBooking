@@ -5,7 +5,8 @@
 
 
     <%-- Landing page --%>
-    
+    <p class="text-center"> <asp:Literal ID="ltlReviewMessage" runat="server"></asp:Literal> </p>
+
     <div id="myCarousel" class="carousel slide container mt-3" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
@@ -57,6 +58,8 @@
     <%-- Section Most visited place --%>
     <div class="album py-5 ">
     <div class="container">
+    
+    <h1 class="text-center my-5">Services</h1>
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
@@ -129,32 +132,42 @@
 
         <h1 class="text-center my-5">Contact</h1>
 
-        <div class="mb-3">
-            <h4>Miracle Airway</h4>
-            <p>+977-9807654321, +977-9807654321</p>
-            <p>miracleairway@gamil.com</p>
-            <p>www.miracleairway.com</p>
-        </div>
+        <div class=" ">
+                <h4>Miracle Airway</h4>
+                <p>+977-9807654321, +977-9807654321</p>
+                <p>miracleairway@gamil.com</p>
+                <p>www.miracleairway.com</p>
+            </div>
+        
 
-      <div class="container p-4 pb-0">
-            <div class="row d-flex justify-content-center">
-              <div class="col-auto">
+      <div class="container p-4 pb-0 d-flex justify-content-center">
+            <div class="d-flex  flex-column w-50">
+
+              <div class=" ">
                 <p class="pt-2">
-                  <strong>Sign up for our newsletter</strong>
+                  <strong>Review</strong>
                 </p>
               </div>
-              <div class="col-md-5 col-12">
+              <div class="">
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="email" id="form5Example27" class="form-control" />
-                  <label class="form-label" for="form5Example27">Email address</label>
+                    <asp:Label ID="lblEmailReview" runat="server" Text="Email" CssClass="form-label" ></asp:Label>
+                    <asp:TextBox ID="txtEmailReview" runat="server" CssClass="form-control input-lg" ></asp:TextBox>                    
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Enter your valid email." ControlToValidate="txtEmailReview" ForeColor="Red" Display="Dynamic" ValidationGroup="reviewGroup"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Invalid email expression!" Display="Dynamic" ControlToValidate="txtEmailReview" ForeColor="Red" ValidationGroup="reviewGroup" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                
+                </div>
+                  <div class="form-outline mb-4">
+                    <asp:Label ID="lblMessageReview" runat="server" Text="Message" CssClass="form-label" ></asp:Label>
+                      <asp:TextBox ID="txtMessageReview" TextMode="MultiLine" CssClass="form-control input-lg" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter some message." ControlToValidate="txtMessageReview" ForeColor="Red" Display="Dynamic" ValidationGroup="reviewGroup"></asp:RequiredFieldValidator>
                 </div>
               </div>
               <div class="col-auto">
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary mb-4">
-                  Subscribe
-                </button>
+                <div class="d-flex justify-content-center mt-4">
+                    <asp:Button ID="btnSend" runat="server" Text="Send" class="btn btn-primary btn-block mb-3 w-10" ValidationGroup="reviewGroup" OnClick="btnSend_Click" />
+                </div>
               </div>
             </div>
 
