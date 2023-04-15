@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Crypto.Engines;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,14 @@ namespace OnlineAirwayTicketBooking.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["role"] == null)
+            {
+                Response.Redirect("../404Page/404Page.aspx");
+            }
+            else
+            {
+                lblUserName.Text = Session["role"].ToString();
+            }
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
