@@ -11,7 +11,16 @@ namespace OnlineAirwayTicketBooking.Admin
 {
 
 
-    public partial class dashboard_page
+    public partial class review_page
     {
+
+        /// <summary>
+        /// GridViewReview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewReview;
     }
 }
