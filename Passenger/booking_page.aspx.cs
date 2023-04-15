@@ -73,7 +73,7 @@ namespace OnlineAirwayTicketBooking.Passenger
         public void GridView_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow row = GridViewFlight.SelectedRow;
-            Response.Redirect("payment.aspx?flight_id=" + row.Cells[0].Text + "&departure=" + row.Cells[3].Text + "&arrival=" + row.Cells[4].Text + "&date=" + row.Cells[5].Text + "&price=" + row.Cells[8].Text);
+            Response.Redirect("payment_page.aspx?flight_id=" + row.Cells[0].Text + "&departure=" + row.Cells[3].Text + "&arrival=" + row.Cells[4].Text + "&date=" + row.Cells[5].Text + "&price=" + row.Cells[8].Text);
         }
 
 

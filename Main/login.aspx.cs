@@ -38,7 +38,7 @@ namespace OnlineAirwayTicketBooking.Main
                 switch (dr["role"].ToString())
                 {
                     case "Normal":
-                        Response.Redirect("../Passanger/booking_page.aspx");
+                        Response.Redirect("../Passenger/booking_page.aspx");
                         break;
 
                     case "Admin":

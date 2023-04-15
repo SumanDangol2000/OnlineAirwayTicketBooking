@@ -57,3 +57,6 @@ D:\OnlineAirwayTicketBooking\obj\Debug\OnlineAirwayTicketBooking.csproj.CoreComp
 D:\OnlineAirwayTicketBooking\obj\Debug\OnlineAirwayTicketBooking.csproj.CopyComplete
 D:\OnlineAirwayTicketBooking\obj\Debug\OnlineAirwayTicketBooking.dll
 D:\OnlineAirwayTicketBooking\obj\Debug\OnlineAirwayTicketBooking.pdb
+D:\OnlineAirwayTicketBooking\bin\BouncyCastle.Crypto.dll
+D:\OnlineAirwayTicketBooking\bin\itextsharp.dll
+D:\OnlineAirwayTicketBooking\bin\itextsharp.xml
