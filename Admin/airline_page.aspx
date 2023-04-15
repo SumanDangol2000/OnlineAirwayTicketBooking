@@ -6,12 +6,12 @@
     <div id="page-content-wrapper ">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4 border-dark border-bottom">
                 <div class="d-flex align-items-center">
-                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                    <i class="fas fa-align-left fs-4 me-3" id="menu-toggle"></i>
                 </div>
 
 
                 <div  id="navbarSupportedContent">
-                <h3> <strong>Airline</strong> </h3>     
+                <h2> <strong>AIRLINE</strong> </h2>     
                 </div>
             </nav>
     
@@ -22,21 +22,21 @@
                      <!-- First name input -->
                     <div class="form-outline mb-3 col-lg-4 col-md-6">
                         <asp:TextBox ID="txtairline" runat="server" CssClass="form-control input-lg" ></asp:TextBox>
-                        <asp:Label ID="lblRegisterFirstName" runat="server" Text="Airline Name" CssClass="form-label" ></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter your first name." ControlToValidate="txtairline" ForeColor="Red" ValidationGroup="paymentGroup"></asp:RequiredFieldValidator>
+                        <asp:Label ID="lbl" runat="server" Text="Airline Name" CssClass="form-label" ></asp:Label>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter Airline name." ControlToValidate="txtairline" ForeColor="Red" ValidationGroup="paymentGroup"></asp:RequiredFieldValidator>
                     </div>
 
                     <!-- Last name input -->
                     <div class="form-outline mb-3 col-lg-4 col-md-6">
                         <asp:TextBox ID="txtairlineAdd" runat="server" CssClass="form-control input-lg" ></asp:TextBox>
                         <asp:Label ID="Label1" runat="server" Text="Address" CssClass="form-label" ></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Enter your last name." ControlToValidate="txtairlineAdd" ForeColor="Red" ValidationGroup="paymentGroup"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Enter Address." ControlToValidate="txtairlineAdd" ForeColor="Red" ValidationGroup="paymentGroup"></asp:RequiredFieldValidator>
                     </div>
 
                      <div class="pt-1 mb-4 ">
                         <!-- Submit button -->
-                         <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary btn-lg btn-block mb-3" Width="250" ValidationGroup="paymentGroup" OnClick="btnSave_Click" />
-                         <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-warning btn-lg btn-block mb-3" Width="250"  OnClick="btnClear_Click" />                    
+                         <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-success btn-lg btn-block mb-3" Width="150" ValidationGroup="paymentGroup" OnClick="btnSave_Click" />
+                         <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-secondary btn-lg btn-block mb-3" Width="150"  OnClick="btnClear_Click" />                    
                      </div>
             </div>
 

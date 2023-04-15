@@ -2,18 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<div id="page-content-wrapper w-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4 border-dark border-bottom">
+        <div class="d-flex align-items-center">
+            <i class="fas fa-align-left  fs-4 me-3" id="menu-toggle"></i>
+        </div>
 
-   <div id="page-content-wrapper ">
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4 border-dark border-bottom">
-            <div class="d-flex align-items-center">
-                <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-            </div>
-
-
-            <div  id="navbarSupportedContent">
-                <h3> <strong>User</strong> </h3>     
-            </div>
-        </nav>  
+        <div  id="navbarSupportedContent">
+            <h2> <strong>USER</strong> </h2>     
+        </div>
+    </nav> 
     <div class="container-fluid px-4 my-5">
          <div class="row g-3 my-2">
                  <div class="row">
@@ -21,21 +19,21 @@
                     <div class="form-outline mb-3 col-lg-4 col-md-6">
                         <asp:TextBox ID="registerFirstName" runat="server" CssClass="form-control input-lg" ></asp:TextBox>
                         <asp:Label ID="lblRegisterFirstName" runat="server" Text="FirstName" CssClass="form-label" ></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter your first name." ControlToValidate="registerFirstName" ForeColor="Red" ValidationGroup="registerUserGroup"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter first name." ControlToValidate="registerFirstName" ForeColor="Red" ValidationGroup="registerUserGroup"></asp:RequiredFieldValidator>
                     </div>
 
                     <!-- Last name input -->
                     <div class="form-outline mb-3 col-lg-4 col-md-6">
                         <asp:TextBox ID="registerLastName" runat="server" CssClass="form-control input-lg" ></asp:TextBox>
                         <asp:Label ID="Label1" runat="server" Text="LastName" CssClass="form-label" ></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Enter your last name." ControlToValidate="registerLastName" ForeColor="Red" ValidationGroup="registerUserGroup"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Enter last name." ControlToValidate="registerLastName" ForeColor="Red" ValidationGroup="registerUserGroup"></asp:RequiredFieldValidator>
                     </div>
 
                     <!-- Email input -->
                     <div class="form-outline mb-3 col-lg-4 col-md-6">
                         <asp:TextBox ID="registerEmail" runat="server" CssClass="form-control input-lg" ></asp:TextBox>
                         <asp:Label ID="Label2" runat="server" Text="Email" CssClass="form-label" ></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Enter your valid email." ControlToValidate="registerEmail" ForeColor="Red" Display="Dynamic" ValidationGroup="registerUserGroup"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Enter valid email." ControlToValidate="registerEmail" ForeColor="Red" Display="Dynamic" ValidationGroup="registerUserGroup"></asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Invalid email expression!" Display="Dynamic" ControlToValidate="registerEmail" ForeColor="Red" ValidationGroup="registerUserGroup" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                     </div>
 
@@ -43,7 +41,7 @@
                     <div class="form-outline mb-3 col-lg-4 col-md-6">
                         <asp:TextBox ID="registerPhone" runat="server" TextMode="Phone" CssClass="form-control input-lg" MaxLength="10"></asp:TextBox>
                         <asp:Label ID="lblRegisterPhone" runat="server" Text="Phone" CssClass="form-label" ></asp:Label>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Enter your valid phone number." ControlToValidate="registerPhone" Display="Dynamic" ForeColor="Red" ValidationGroup="registerUserGroup" ValidationExpression="\d+"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Enter valid phone number." ControlToValidate="registerPhone" Display="Dynamic" ForeColor="Red" ValidationGroup="registerUserGroup" ValidationExpression="\d+"></asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="registerPhone" ErrorMessage="Please Enter Only Numbers" Display="Dynamic"  ForeColor="Red" ValidationExpression="^[0-9]{10}$" ValidationGroup="registerUserGroup"> </asp:RegularExpressionValidator>
                     </div>
 
@@ -64,8 +62,8 @@
 
                     <div class="pt-1 mb-4 ">
                         <!-- Submit button -->
-                        <asp:Button ID="btLogin" runat="server" Text="Save" CssClass="btn btn-primary btn-lg btn-block mb-3" Width="250" ValidationGroup="registerUserGroup" OnClick="btSave_Click" />
-                        <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-warning btn-lg btn-block mb-3" Width="250"  OnClick="btnClear_Click" />
+                        <asp:Button ID="btLogin" runat="server" Text="Save" CssClass="btn btn-success btn-lg btn-block mb-3" Width="150" ValidationGroup="registerUserGroup" OnClick="btSave_Click" />
+                        <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-secondary btn-lg btn-block mb-3" Width="150"  OnClick="btnClear_Click" />
                     
                     </div>
                  </div>   

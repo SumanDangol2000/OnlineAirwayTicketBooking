@@ -5,11 +5,11 @@
 <div id="page-content-wrapper ">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4 border-dark border-bottom">
         <div class="d-flex align-items-center">
-            <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+            <i class="fas fa-align-left  fs-4 me-3" id="menu-toggle"></i>
         </div>
 
         <div  id="navbarSupportedContent">
-            <h3> <strong>Flight</strong> </h3>     
+            <h2> <strong>FLIGHT</strong> </h2>     
         </div>
     </nav> 
     
@@ -27,13 +27,13 @@
                   
                     <div class="form-outline mb-3 col-lg-4 col-md-6">
                         <asp:TextBox ID="txtDepartureAirport" runat="server" CssClass="form-control input-lg" ></asp:TextBox>
-                        <asp:Label ID="Label1" runat="server" Text="Departure airport" CssClass="form-label" ></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text="Departure location" CssClass="form-label" ></asp:Label>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Enter department airport." ControlToValidate="txtDepartureAirport" ForeColor="Red" ValidationGroup="paymentGroup"></asp:RequiredFieldValidator>
                     </div>
 
                      <div class="form-outline mb-3 col-lg-4 col-md-6">
                         <asp:TextBox ID="txtArrivalAirport" runat="server" CssClass="form-control input-lg" ></asp:TextBox>
-                        <asp:Label ID="Label2" runat="server" Text="Arrival airport" CssClass="form-label" ></asp:Label>
+                        <asp:Label ID="Label2" runat="server" Text="Arrival location" CssClass="form-label" ></asp:Label>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter arrival airport." ControlToValidate="txtArrivalAirport" ForeColor="Red" ValidationGroup="paymentGroup"></asp:RequiredFieldValidator>
                     </div>
 
@@ -63,10 +63,16 @@
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Enter airline id." ControlToValidate="txtAirlineId" ForeColor="Red" ValidationGroup="paymentGroup"></asp:RequiredFieldValidator>
                     </div>
 
+                      <div class="form-outline mb-3 col-lg-4 col-md-6">
+                        <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control input-lg" ></asp:TextBox>
+                        <asp:Label ID="Label7" runat="server" Text="Price" CssClass="form-label" ></asp:Label>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Enter amount." ControlToValidate="txtPrice" ForeColor="Red" ValidationGroup="paymentGroup"></asp:RequiredFieldValidator>
+                    </div>
+
                      <div class="pt-1 mb-4 ">
                         
-                         <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary btn-lg btn-block mb-3" Width="250" ValidationGroup="paymentGroup" OnClick="btnSave_Click" />
-                         <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-warning btn-lg btn-block mb-3" Width="250" OnClick="btnClear_Click" />
+                         <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-success btn-lg btn-block mb-3" Width="150" ValidationGroup="paymentGroup" OnClick="btnSave_Click" />
+                         <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-secondary btn-lg btn-block mb-3" Width="150" OnClick="btnClear_Click" />
                     
                      </div>
             </div>
@@ -86,6 +92,7 @@
                             <asp:BoundField DataField="departure_time" HeaderText="Departure time" SortExpression="departure_time"></asp:BoundField>
                             <asp:BoundField DataField="arrival_time" HeaderText="Arrival time" SortExpression="arrival_time"></asp:BoundField>
                             <asp:BoundField DataField="duration" HeaderText="Duration" SortExpression="duration"></asp:BoundField>
+                            <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price"></asp:BoundField>
                             <asp:CommandField ShowEditButton="True" ButtonType="Button"></asp:CommandField>
                         </Columns>
                     </asp:GridView>

@@ -13,6 +13,7 @@ CREATE TABLE flights (
   FOREIGN KEY (airline_id) REFERENCES airlines(airline_id),
 );
 
+ALTER TABLE flights ADD price DECIMAL(10,2) ;
 
 CREATE TABLE users (
   user_id INT NOT NULL PRIMARY KEY IDENTITY(100,1),

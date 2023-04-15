@@ -14,13 +14,17 @@ namespace OnlineAirwayTicketBooking.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                loadFlightData();
+            }
 
         }
 
         public void loadFlightData()
         {
             Myconnection dbConnect = new Myconnection();
-            string cmdText = "SELECT f.flight_id, f.flight_number, f.departure_airport, f.arrival_airport , f.departure_time , f.arrival_time , f.duration, a.airline_name FROM flights f " +
+            string cmdText = "SELECT f.flight_id, f.flight_number, f.departure_airport, f.arrival_airport , f.departure_time , f.arrival_time , f.duration, f.price, a.airline_name FROM flights f " +
                 "INNER JOIN airlines a on a.airline_id = f.airline_id";
             SqlCommand cmd = new SqlCommand(cmdText, dbConnect.connect);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -37,7 +41,7 @@ namespace OnlineAirwayTicketBooking.Admin
         {
             Myconnection dbConnect = new Myconnection();
             string cmdText = "INSERT INTO flights (flight_number, departure_airport, arrival_airport , departure_time , arrival_time , duration, airline_id) VALUES" +
-                " (@flight_number, @departure_airport, @arrival_airport , @departure_time , @arrival_time , @duration, @airline_id)";
+                " (@flight_number, @departure_airport, @arrival_airport , @departure_time , @arrival_time , @duration, @airline_id, @price)";
             SqlCommand cmd = new SqlCommand(cmdText, dbConnect.connect);
             cmd.Parameters.AddWithValue("@flight_number", txtFlightNumber.Text);
             cmd.Parameters.AddWithValue("@departure_airport", txtDepartureAirport.Text);
@@ -46,6 +50,7 @@ namespace OnlineAirwayTicketBooking.Admin
             cmd.Parameters.AddWithValue("@arrival_time", txtArrivalTime.Text);
             cmd.Parameters.AddWithValue("@duration", Convert.ToInt32(txtDuration.Text));
             cmd.Parameters.AddWithValue("@airline_id", Convert.ToInt32(txtAirlineId.Text));
+            cmd.Parameters.AddWithValue("@price", Convert.ToDouble(txtPrice.Text));
             cmd.ExecuteNonQuery();
             dbConnect.connect.Close();
 
@@ -70,10 +75,11 @@ namespace OnlineAirwayTicketBooking.Admin
             string departure_time = e.NewValues["departure_time"].ToString();
             string arrival_time = e.NewValues["arrival_time"].ToString();
             string duration = e.NewValues["duration"].ToString();
+            string price = e.NewValues["price"].ToString();
 
             Myconnection dbConnect = new Myconnection();
             string cmdText = "UPDATE flights SET flight_number=@flight_number, departure_airport=@departure_airport, arrival_airport=@arrival_airport , departure_time=@departure_time ," +
-                " arrival_time=@arrival_time , duration=@duration WHERE flight_id=@id";
+                " arrival_time=@arrival_time , duration=@duration, price=@price WHERE flight_id=@id";
             SqlCommand cmd = new SqlCommand(cmdText, dbConnect.connect);
             cmd.Parameters.AddWithValue("@id", id);
             cmd.Parameters.AddWithValue("@flight_number", flight_number);
@@ -82,6 +88,7 @@ namespace OnlineAirwayTicketBooking.Admin
             cmd.Parameters.AddWithValue("@departure_time", departure_time);
             cmd.Parameters.AddWithValue("@arrival_time", arrival_time);
             cmd.Parameters.AddWithValue("@duration", duration);
+            cmd.Parameters.AddWithValue("@price", price);
             cmd.ExecuteNonQuery();
             dbConnect.connect.Close();
             GridViewFlight.EditIndex = -1;
@@ -113,6 +120,7 @@ namespace OnlineAirwayTicketBooking.Admin
             txtDepartureTime.Text = string.Empty;
             txtDuration.Text = string.Empty;
             txtFlightNumber.Text = string.Empty;
+            txtPrice.Text = string.Empty;
 
 
         }

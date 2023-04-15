@@ -24,13 +24,13 @@ namespace OnlineAirwayTicketBooking.Admin
         protected global::System.Web.UI.WebControls.TextBox txtairline;
 
         /// <summary>
-        /// lblRegisterFirstName control.
+        /// lbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRegisterFirstName;
+        protected global::System.Web.UI.WebControls.Label lbl;
 
         /// <summary>
         /// RequiredFieldValidator4 control.

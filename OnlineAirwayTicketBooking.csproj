@@ -71,6 +71,7 @@
     <Content Include="Admin\airline_page.aspx" />
     <Content Include="Admin\dashboard_page.aspx" />
     <Content Include="Admin\flight_page.aspx" />
+    <Content Include="Admin\review_page.aspx" />
     <Content Include="Admin\user_page.aspx" />
     <Content Include="App_Data\Database.mdf" />
     <Content Include="App_Data\Database_log.ldf">
@@ -122,6 +123,13 @@
     </Compile>
     <Compile Include="Admin\flight_page.aspx.designer.cs">
       <DependentUpon>flight_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\review_page.aspx.cs">
+      <DependentUpon>review_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\review_page.aspx.designer.cs">
+      <DependentUpon>review_page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\user_page.aspx.cs">
       <DependentUpon>user_page.aspx</DependentUpon>

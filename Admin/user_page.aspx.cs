@@ -16,7 +16,10 @@ namespace OnlineAirwayTicketBooking.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                loadUserData();
+            }
         }
 
         protected void btSave_Click(object sender, EventArgs e)

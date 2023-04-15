@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>Miracle Airway| Admin</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -19,7 +19,7 @@
 
         <div class="d-flex" id="wrapper" >
         <!-- Sidebar -->
-        <div class="bg-blue" id="sidebar-wrapper" >
+        <div class="bg-blue border-end " id="sidebar-wrapper" >
             <div class="sidebar-heading text-center py-4 primary-text fs-4  text-uppercase border-bottom">
                    <img  src="../Image/user.png" alt="Company Logo"   width="100"/> 
                    
@@ -34,7 +34,7 @@
                 <a href="airline_page.aspx" class="list-group-item list-group-item-action   fw-bold">Airlines</a>
                 <a href="review_page.aspx" class="list-group-item list-group-item-action   fw-bold">Reviews</a>
                 <a href="#" class="list-group-item list-group-item-action " >
-                    <asp:Button ID="btnLogout" runat="server" Text="Logout" class=" bg-transparent  fw-bold border-0 p-0"  />
+                    <asp:Button ID="btnLogout" runat="server" Text="Logout" class=" bg-transparent  fw-bold border-0 p-0" OnClick="btnLogout_Click" />
                 </a>
                 
             </div>
